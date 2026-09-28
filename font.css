@@ -428,10 +428,23 @@ footer{background:var(--black);color:rgba(255,255,255,.6);padding:72px 24px 40px
    RESPONSIVE
 ══════════════════════════════════════════ */
 @media(max-width:960px){
+@media(max-width:960px){
   .hero-grid,.tab-panel,.human-grid,.tactical-grid,.final-grid{grid-template-columns:1fr;gap:48px}
-  .hero-visual,.tab-visual,.tactical-vis,.final-vis{display:none}
+  
+  /* Hapus .hero-visual dari baris ini */
+  .tab-visual,.tactical-vis,.final-vis{display:none} 
+  
+  /* Tambahkan kode ini agar foto muncul di atas/bawah teks dan rapi di HP */
+  .hero-visual {
+    display: flex;
+    justify-content: center;
+    order: -1; /* Gambar akan muncul di atas teks. Hapus baris ini jika ingin di bawah teks */
+    margin-bottom: 24px;
+  }
+  
   .how-grid{grid-template-columns:1fr;gap:0}
   .stories-grid,.blog-grid{grid-template-columns:1fr 1fr}
+  /* ... sisa kode ... */
   .fee-wrap{grid-template-columns:1fr 1fr}
   .foot-top{grid-template-columns:1fr 1fr}
   .tab-panel{padding:40px 0}
