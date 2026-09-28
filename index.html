@@ -97,13 +97,13 @@
   <nav id="nav" class="top">
     <div class="c nav-inner">
       <a href="#hero" class="nav-logo">
-        Fahrurrazi Athariq
+        Fahrurrazi's Portfolio
       </a>
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
-        <li><a href="#human">About</a></li>
-        <li><a href="#advisors">Skills</a></li>
+        <li><a href="#experience">Experiences</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#advisors">Skills</a></li>
       </ul>
       <div class="nav-ctas">
         <a href="https://www.linkedin.com/in/fahrurrazi-athariq/" target="_blank" class="btn btn-ghost">LinkedIn</a>
@@ -133,7 +133,7 @@
   <section id="hero">
     <div class="hero-grid">
       <div>
-        <h1 class="hero-h1">Hi, I'm Razi</h1>
+        <h1 class="hero-h1">Hii, I'm Razi</h1>
         <p class="hero-sub">AI learning engineer and Software Engineer who enjoys building efficient, scalable
           solutions, writing clean code, designing great interfaces, and tackling challenges with creativity and a
           little bit of fun along the way.</p>
@@ -175,9 +175,9 @@
 
       <div class="tab-row" id="expTabRow"
         style="position:relative; display:flex; border-bottom:1px solid var(--border); overflow-x:auto;">
-        <button class="exp-btn active" data-tab="marketing">Marketing BINUS @Bandung →</button>
-        <button class="exp-btn" data-tab="gdgoc">GDGoC BINUS @Bandung →</button>
-        <button class="exp-btn" data-tab="himti">HIMTI BINUS @Bandung →</button>
+        <button class="exp-btn active" data-tab="marketing">Marketing BINUS @Bandung</button>
+        <button class="exp-btn" data-tab="gdgoc">GDGoC BINUS @Bandung</button>
+        <button class="exp-btn" data-tab="himti">HIMTI BINUS @Bandung</button>
         <div class="tab-indicator" id="expTabIndicator"></div>
       </div>
 
@@ -222,80 +222,256 @@
 
   </section>
 
-  <section id="human">
+
+  <section id="projects">
     <div class="c">
-      <div class="human-grid">
-        <div class="reveal-left">
-          <div class="human-lbl">Who I Am</div>
-          <h2 class="human-title">Clean code,<br>creative mind</h2>
-          <div class="human-feats">
-            <div class="human-feat">
-              <div class="feat-dot"></div>
-              <div>
-                <div class="feat-title">AI learning engineer</div>
-                <div class="feat-body">I'm passionate about building AI-powered systems, optimizing algorithms, and
-                  exploring how technology can solve real-world problems creatively.</div>
-              </div>
-            </div>
-            <div class="human-feat">
-              <div class="feat-dot"></div>
-              <div>
-                <div class="feat-title">Active across multiple organizations</div>
-                <div class="feat-body">From Marketing BINUS as a Part-time Promotion Team to Diplomatic roles in GDGoC
-                  and Academic Event Divisions in HIMTI — I thrive in collaborative, fast-moving environments.</div>
-              </div>
-            </div>
-            <div class="human-feat">
-              <div class="feat-dot"></div>
-              <div>
-                <div class="feat-title">Computer Science student at Binus</div>
-                <div class="feat-body">As a student of Computer Science , I currently pursuing the Intelligent Systems
-                  streaming program at Binus @Kemanggisan, Jakarta — building a strong foundation in algorithms and
-                  system of AI.</div>
-              </div>
-            </div>
-            <div class="human-feat">
-              <div class="feat-dot"></div>
-              <div>
-                <div class="feat-title">Always learning, always building</div>
-                <div class="feat-body">I believe the best developers never stop learning. I continuously explore new
-                  tools, frameworks, and concepts to stay ahead and deliver modern, quality work.</div>
-              </div>
+      <!-- Menambahkan flexbox untuk memisahkan kiri dan kanan -->
+      <div class="stories-hdr reveal" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 40px;">
+        
+        <!-- Membungkus Label dan Judul dalam satu div (Bagian Kiri) -->
+        <div>
+          <div class="label" style="margin-bottom:14px">My Portfolio</div>
+          <h2 class="section-title" style="margin-bottom: 0;">Projects I've built <em>& designed</em></h2>
+        </div>
+
+        <!-- Tombol LinkedIn dipindahkan ke dalam container (Bagian Kanan) -->
+        <a href="https://www.linkedin.com/in/fahrurrazi-athariq" target="_blank" class="btn btn-outline"
+          onclick="addRipple(event)">See on LinkedIn →</a>
+          
+      </div>
+      <div class="stories-grid">
+        
+
+        <div class="story-card reveal d-3">
+          <div class="story-img-box">
+            <img src="assets/images/f1.png" alt="f1">
+          </div>
+
+          <div class="story-tag">Machine Learning</div>
+          <div class="how-item-title">"F1 Race Strategy - F1 Pit Stop Prediction Prototype Using Classical Machine
+            Learning"</div>
+          <p class="story-body">Desc</p>
+          <a href="https://race-strategist-f1.streamlit.app/" target="_blank" class="story-link">VIEW PROJECT →</a>
+          <div class="story-person">
+
+            <div>
+              <div class="person-name">F1 Race Strategy - 2026</div>
+              <div class="person-role">Back-end · Machine Learning</div>
             </div>
           </div>
         </div>
-        <div class="reveal-right d2">
-          <div class="advisor-card">
-            <div class="ac-lbl">About Me</div>
-            <div class="ac-name">Fahrurrazi Athariq</div>
-            <div class="ac-role">Creative Developer & Tech Enthusiast</div>
-            <div class="ac-rows">
-              <div class="ac-row">
-                <div class="ac-key">Degree</div>
-                <div class="ac-val">Computer Science, Binus University</div>
-              </div>
-              <div class="ac-row">
-                <div class="ac-key">Experience</div>
-                <div class="ac-val">GDGoC · HIMTI · Marketing Binus</div>
-              </div>
-              <div class="ac-row">
-                <div class="ac-key">Location</div>
-                <div class="ac-val">Jakarta, Indonesia</div>
-              </div>
-            </div>
-            <div class="ac-divider"></div>
-            <div class="ac-cta">
-              <div class="ac-status"><span class="ac-dot"></span>Open for opportunities</div>
-              <a href="mailto:raziatr27@gmail.com" class="btn btn-white" onclick="addRipple(event)"
-                style="font-size:13px;padding:8px 18px">Get In Touch</a>
+
+        <div class="story-card reveal d-2">
+          <div class="story-img-box">
+            <img src="assets/images/swiftcase.png" alt="swiftcase">
+          </div>
+
+          <div class="story-tag">Back-End</div>
+          <div class="how-item-title">"SwiftCase - Point of Sales System"</div>
+          <p class="story-body">A Point-of-Sale system for small culinary businesses, built to be a free, lightweight
+            alternative to expensive POS subscriptions. As Back-End Developer, I built the REST API with Node.js,
+            Express, and the built-in node:sqlite module, handling JWT auth for three roles, QRIS payment via Xendit,
+            real-time order updates, and atomic stock transactions across 15+ endpoint groups.</p>
+          <a href="https://github.com/raziatr/SwiftCase.git" target="_blank" class="story-link">VIEW ON GITHUB →</a>
+          <div class="story-person">
+
+            <div>
+              <div class="person-name">SwiftCase - 2026</div>
+              <div class="person-role">Back-end · Software Engineering</div>
             </div>
           </div>
+        </div>
+
+        <div class="story-card reveal d-1">
+          <div class="story-img-box">
+            <img src="assets/images/wartafy.png" alt="wartafy">
+          </div>
+
+          <div class="story-tag">Text Classification</div>
+          <div class="how-item-title">"Wartafy - News Category Classifier"</div>
+          <p class="story-body">A news classifier that sorts articles into four categories, built entirely with
+            classical NLP, no pre-trained transformers. I trained and compared four models (Logistic Regression, Naive
+            Bayes, MLP, XGBoost) on the AG News dataset using TF-IDF, then deployed it as a public Streamlit app with
+            single-article and batch prediction.</p>
+          <a href="https://wartafy-news-category-classifier.streamlit.app/" target="_blank" class="story-link">VIEW
+            PROJECT →</a>
+          <div class="story-person">
+
+            <div>
+              <div class="person-name">Wartafy - 2026</div>
+              <div class="person-role">scikit-learn · Natural Language Processing</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card reveal d-1">
+          <div class="story-img-box">
+            <img src="assets/images/freeway.png" alt="freeway">
+          </div>
+
+          <div class="story-tag">Computer Vision</div>
+          <div class="how-item-title">"Freeway - A Lightweight Vision Based Parking Occupancy Detection System"</div>
+          <p class="story-body">A lightweight parking occupancy detector that tells drivers which spots are free using
+            classical computer vision instead of deep learning, so it runs on a normal CPU with no GPU. As Data Engineer
+            (6-person team), I worked on the 5 step OpenCV preprocessing pipeline and the pixel-counting classifier with
+            temporal smoothing, served live through a Flask web app.</p>
+          <a href="https://github.com/raziatr/Freeway.git" target="_blank" class="story-link">VIEW ON GITHUB →</a>
+          <div class="story-person">
+
+            <div>
+              <div class="person-name">Freeway - 2026</div>
+              <div class="person-role">OpenCV · Computer Vision</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card reveal d2">
+          <div class="story-img-box">
+            <img src="assets/images/Heartify.png" alt="Heartify">
+          </div>
+
+          <div class="story-tag">Mobile UI/UX</div>
+          <div class="how-item-title">"Heartify - A Smart Device-Based Early Warning System for Cardiac Arrest"</div>
+          <p class="story-body">An early detection application for heart attacks designed to interpret smartwatch
+            biometrics (like Heart Rate and Heart Rate Variability) into actionable, real-time alerts. Heartify aims to
+            solve this by providing simple visual indicators and automated emergency alerts when abnormal patterns are
+            detected.</p>
+          <a href="https://www.figma.com/proto/y2DfmhTdMr7RPX0VEESCeO/Heartify-Mobile-App_PKM-KC_OOP?node-id=2279-78&p=f&t=XO8xcqE6ZUppgTk1-1&scaling=scale-down&content-scaling=fixed&page-id=2016%3A2&starting-point-node-id=2279%3A78&desktop-link-click-timestamp=1779808965736&desktop-ul-exp-bucket=po"
+            target="_blank" class="story-link">VIEW PROJECT →</a>
+          <div class="story-person">
+
+            <div>
+              <div class="person-name">Heartify - 2025</div>
+              <div class="person-role">Figma · Mobile UI/UX</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card reveal d1">
+          <div class="story-img-box">
+            <img src="assets/images/medigo.png" alt="Medigo Preview">
+          </div>
+
+          <div class="story-tag">UI/UX Design</div>
+          <div class="how-item-title">"MediGo - Drug Vending Machine"</div>
+          <p class="story-body">A UI/UX design project for a smart drug vending machine called Medigo. The design
+            focuses on a clean, accessible interface that makes purchasing over-the-counter medicine fast and intuitive
+            built entirely in Figma with interactive prototyping.</p>
+          <a href="https://www.figma.com/proto/TN9G4Yqm7AQJkhgt7ECXDw/Medigo?node-id=1-4&t=NnEvhDVDMQsUkepi-1"
+            target="_blank" class="story-link">VIEW PROJECT →</a>
+          <div class="story-person">
+
+            <div>
+              <div class="person-name">Medigo App - 2025</div>
+              <div class="person-role">Figma · UI/UX Design</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card reveal d2">
+          <div class="story-img-box">
+            <img src="assets/images/luxuryride.png" alt="Luxury Ride Preview">
+          </div>
+
+          <div class="story-tag">Mobile UI/UX</div>
+          <div class="how-item-title">"Luxury Ride - Rent Car Mobile App"</div>
+          <p class="story-body">A mobile app UI/UX design for a premium car rental service called Luxury Ride. The
+            design emphasizes elegance and smooth user flow from browsing available vehicles to booking confirmation all
+            prototyped interactively in Figma.</p>
+          <a href="https://www.figma.com/proto/yQR3deTmD7iVSBBBkqshj5/Luxury-Ride?node-id=31-3&t=2UDiVQrmxAJARcBL-1&desktop-link-click-timestamp=1779642891903&desktop-ul-exp-bucket=po&starting-point-node-id=31%3A3"
+            target="_blank" class="story-link">VIEW PROJECT →</a>
+          <div class="story-person">
+
+            <div>
+              <div class="person-name">Luxury Ride - 2025</div>
+              <div class="person-role">Figma · Mobile UI/UX</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card reveal d3">
+          <div class="story-img-box">
+            <img src="assets/images/aliengame.png" alt="Alien Game Preview">
+          </div>
+
+          <div class="story-tag">System Programming</div>
+          <div class="how-item-title">"Alien Game - Game Concept"</div>
+          <p class="story-body">A text-based alien game built in C for the Algorithm & Programming Lab. The project
+            demonstrates core programming concepts memory management, game loops, collision logic, and structured code
+            design all implemented from scratch in pure C.</p>
+          <a href="https://github.com/raziatr/AOL-ALGOPRO-LAB/blob/main/AOL-LABSOCS.c" target="_blank"
+            class="story-link">VIEW ON GITHUB →</a>
+          <div class="story-person">
+
+            <div>
+              <div class="person-name">Alien Game - 2024</div>
+              <div class="person-role">C Language · System Programming</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="fees-hdr reveal" style="margin-top: 32px;">
+        <div class="fees-eyebrow">
+          <bold>Swipe to see my other projects</bold> →
         </div>
       </div>
     </div>
   </section>
 
-  <section id="advisors">
+  <section id="publications" style="padding:96px 24px; background:var(--white)">
+    <div class="c">
+      <div class="blog-hdr reveal">
+        <div>
+          <div class="label" style="margin-bottom:14px">Publications</div>
+          <h2 class="section-title">Research Papers</h2>
+        </div>
+        <a href="https://www.linkedin.com/in/fahrurrazi-athariq" target="_blank" class="btn btn-outline"
+          onclick="addRipple(event)">See on LinkedIn →</a>
+      </div>
+
+      <div class="blog-grid">
+
+        <div class="blog-card reveal d1" style="padding: 36px 32px;">
+          <div>
+            <div class="blog-tag" style="margin-bottom: 14px;">Apr 11, 2026 · Zenodo</div>
+            <div class="blog-title"
+              style="font-size: 22px; line-height: 1.4; margin-bottom: 16px; color: var(--black);">Design and Simulation
+              of RLC Rectifier for Parallel LED Circuit</div>
+            <div class="blog-meta"><span>Research Paper</span><span>Python Simulation</span></div>
+          </div>
+          <div style="margin-top: 40px;">
+            <a href="https://zenodo.org/records/19509015" target="_blank" class="btn btn-dark"
+              style="font-size: 13px; padding: 10px 24px; width: fit-content;" onclick="addRipple(event)">View Paper
+              &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card reveal d2" style="padding: 36px 32px;">
+          <div>
+            <div class="blog-tag" style="margin-bottom: 14px;">Dec 16, 2025 · Zenodo</div>
+            <div class="blog-title"
+              style="font-size: 22px; line-height: 1.4; margin-bottom: 16px; color: var(--black);">Automatic Fan Speed
+              Control System Based on Room Temperature & Humidity...</div>
+            <div class="blog-meta"><span>Research Paper</span><span>Tsukamoto Fuzzy Logic</span></div>
+          </div>
+          <div style="margin-top: 40px;">
+            <a href="https://zenodo.org/records/17954364" target="_blank" class="btn btn-dark"
+              style="font-size: 13px; padding: 10px 24px; width: fit-content;" onclick="addRipple(event)">View Paper
+              &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="fees-hdr reveal" style="margin-top: 32px;">
+        <div class="fees-eyebrow">
+          <bold>Swipe to see my other Papers</bold> →
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <section id="advisors">
     <div class="c">
       <div class="advisors-hdr reveal">
         <div class="label" style="margin-bottom:14px" id="skills">My Skills</div>
@@ -474,255 +650,47 @@
       </div>
   </section>
 
-  <section id="projects">
-    <div class="c">
-      <div class="stories-hdr reveal">
-        <div class="label" style="margin-bottom:14px">My Portfolio</div>
-        <h2 class="section-title">Projects I've built <em>& designed</em></h2>
-      </div>
-
-      <div class="stories-grid">
-
-        <div class="story-card reveal d-3">
-          <div class="story-img-box">
-            <img src="assets/images/f1.png" alt="f1">
-          </div>
-
-          <div class="story-tag">Machine Learning</div>
-          <div class="how-item-title">"F1 Race Strategy - F1 Pit Stop Prediction Prototype Using Classical Machine
-            Learning"</div>
-          <p class="story-body">Desc</p>
-          <a href="https://race-strategist-f1.streamlit.app/" target="_blank" class="story-link">VIEW PROJECT →</a>
-          <div class="story-person">
-
-            <div>
-              <div class="person-name">F1 Race Strategy - 2026</div>
-              <div class="person-role">Back-end · Machine Learning</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal d-2">
-          <div class="story-img-box">
-            <img src="assets/images/swiftcase.png" alt="swiftcase">
-          </div>
-
-          <div class="story-tag">Back-End</div>
-          <div class="how-item-title">"SwiftCase - Point of Sales System"</div>
-          <p class="story-body">A Point-of-Sale system for small culinary businesses, built to be a free, lightweight
-            alternative to expensive POS subscriptions. As Back-End Developer, I built the REST API with Node.js,
-            Express, and the built-in node:sqlite module, handling JWT auth for three roles, QRIS payment via Xendit,
-            real-time order updates, and atomic stock transactions across 15+ endpoint groups.</p>
-          <a href="https://github.com/raziatr/SwiftCase.git" target="_blank" class="story-link">VIEW ON GITHUB →</a>
-          <div class="story-person">
-
-            <div>
-              <div class="person-name">SwiftCase - 2026</div>
-              <div class="person-role">Back-end · Software Engineering</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal d-1">
-          <div class="story-img-box">
-            <img src="assets/images/wartafy.png" alt="wartafy">
-          </div>
-
-          <div class="story-tag">Text Classification</div>
-          <div class="how-item-title">"Wartafy - News Category Classifier"</div>
-          <p class="story-body">A news classifier that sorts articles into four categories, built entirely with
-            classical NLP, no pre-trained transformers. I trained and compared four models (Logistic Regression, Naive
-            Bayes, MLP, XGBoost) on the AG News dataset using TF-IDF, then deployed it as a public Streamlit app with
-            single-article and batch prediction.</p>
-          <a href="https://wartafy-news-category-classifier.streamlit.app/" target="_blank" class="story-link">VIEW
-            PROJECT →</a>
-          <div class="story-person">
-
-            <div>
-              <div class="person-name">Wartafy - 2026</div>
-              <div class="person-role">scikit-learn · Natural Language Processing</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal d-1">
-          <div class="story-img-box">
-            <img src="assets/images/freeway.png" alt="freeway">
-          </div>
-
-          <div class="story-tag">Computer Vision</div>
-          <div class="how-item-title">"Freeway - A Lightweight Vision-Based Parking Occupancy Detection System"</div>
-          <p class="story-body">A lightweight parking occupancy detector that tells drivers which spots are free using
-            classical computer vision instead of deep learning, so it runs on a normal CPU with no GPU. As Data Engineer
-            (6-person team), I worked on the 5 step OpenCV preprocessing pipeline and the pixel-counting classifier with
-            temporal smoothing, served live through a Flask web app.</p>
-          <a href="https://github.com/raziatr/Freeway.git" target="_blank" class="story-link">VIEW ON GITHUB →</a>
-          <div class="story-person">
-
-            <div>
-              <div class="person-name">Freeway - 2026</div>
-              <div class="person-role">OpenCV · Computer Vision</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal d2">
-          <div class="story-img-box">
-            <img src="assets/images/Heartify.png" alt="Heartify">
-          </div>
-
-          <div class="story-tag">Mobile UI/UX</div>
-          <div class="how-item-title">"Heartify - A Smart Device-Based Early Warning System for Cardiac Arrest"</div>
-          <p class="story-body">An early detection application for heart attacks designed to interpret smartwatch
-            biometrics (like Heart Rate and Heart Rate Variability) into actionable, real-time alerts. Heartify aims to
-            solve this by providing simple visual indicators and automated emergency alerts when abnormal patterns are
-            detected.</p>
-          <a href="https://www.figma.com/proto/y2DfmhTdMr7RPX0VEESCeO/Heartify-Mobile-App_PKM-KC_OOP?node-id=2279-78&p=f&t=XO8xcqE6ZUppgTk1-1&scaling=scale-down&content-scaling=fixed&page-id=2016%3A2&starting-point-node-id=2279%3A78&desktop-link-click-timestamp=1779808965736&desktop-ul-exp-bucket=po"
-            target="_blank" class="story-link">VIEW PROJECT →</a>
-          <div class="story-person">
-
-            <div>
-              <div class="person-name">Heartify - 2025</div>
-              <div class="person-role">Figma · Mobile UI/UX</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal d1">
-          <div class="story-img-box">
-            <img src="assets/images/medigo.png" alt="Medigo Preview">
-          </div>
-
-          <div class="story-tag">UI/UX Design</div>
-          <div class="how-item-title">"MediGo - Drug Vending Machine"</div>
-          <p class="story-body">A UI/UX design project for a smart drug vending machine called Medigo. The design
-            focuses on a clean, accessible interface that makes purchasing over-the-counter medicine fast and intuitive
-            built entirely in Figma with interactive prototyping.</p>
-          <a href="https://www.figma.com/proto/TN9G4Yqm7AQJkhgt7ECXDw/Medigo?node-id=1-4&t=NnEvhDVDMQsUkepi-1"
-            target="_blank" class="story-link">VIEW PROJECT →</a>
-          <div class="story-person">
-
-            <div>
-              <div class="person-name">Medigo App - 2025</div>
-              <div class="person-role">Figma · UI/UX Design</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal d2">
-          <div class="story-img-box">
-            <img src="assets/images/luxuryride.png" alt="Luxury Ride Preview">
-          </div>
-
-          <div class="story-tag">Mobile UI/UX</div>
-          <div class="how-item-title">"Luxury Ride - Rent Car Mobile App"</div>
-          <p class="story-body">A mobile app UI/UX design for a premium car rental service called Luxury Ride. The
-            design emphasizes elegance and smooth user flow from browsing available vehicles to booking confirmation all
-            prototyped interactively in Figma.</p>
-          <a href="https://www.figma.com/proto/yQR3deTmD7iVSBBBkqshj5/Luxury-Ride?node-id=31-3&t=2UDiVQrmxAJARcBL-1&desktop-link-click-timestamp=1779642891903&desktop-ul-exp-bucket=po&starting-point-node-id=31%3A3"
-            target="_blank" class="story-link">VIEW PROJECT →</a>
-          <div class="story-person">
-
-            <div>
-              <div class="person-name">Luxury Ride - 2025</div>
-              <div class="person-role">Figma · Mobile UI/UX</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="story-card reveal d3">
-          <div class="story-img-box">
-            <img src="assets/images/aliengame.png" alt="Alien Game Preview">
-          </div>
-
-          <div class="story-tag">System Programming</div>
-          <div class="how-item-title">"Alien Game — Game Concept"</div>
-          <p class="story-body">A text-based alien game built in C for the Algorithm & Programming Lab. The project
-            demonstrates core programming concepts memory management, game loops, collision logic, and structured code
-            design all implemented from scratch in pure C.</p>
-          <a href="https://github.com/raziatr/AOL-ALGOPRO-LAB/blob/main/AOL-LABSOCS.c" target="_blank"
-            class="story-link">VIEW ON GITHUB →</a>
-          <div class="story-person">
-
-            <div>
-              <div class="person-name">Alien Game - 2024</div>
-              <div class="person-role">C Language · System Programming</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="fees-hdr reveal" style="margin-top: 32px;">
-        <div class="fees-eyebrow">
-          <bold>Swipe to see my other projects</bold> →
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="publications" style="padding:96px 24px; background:var(--white)">
-    <div class="c">
-      <div class="blog-hdr reveal">
-        <div>
-          <div class="label" style="margin-bottom:14px">Publications</div>
-          <h2 class="section-title">Research Papers</h2>
-        </div>
-        <a href="https://www.linkedin.com/in/fahrurrazi-athariq" target="_blank" class="btn btn-outline"
-          onclick="addRipple(event)">See on LinkedIn →</a>
-      </div>
-
-      <div class="blog-grid">
-
-        <div class="blog-card reveal d1" style="padding: 36px 32px;">
-          <div>
-            <div class="blog-tag" style="margin-bottom: 14px;">Apr 11, 2026 · Zenodo</div>
-            <div class="blog-title"
-              style="font-size: 22px; line-height: 1.4; margin-bottom: 16px; color: var(--black);">Design and Simulation
-              of RLC Rectifier for Parallel LED Circuit</div>
-            <div class="blog-meta"><span>Research Paper</span><span>Python Simulation</span></div>
-          </div>
-          <div style="margin-top: 40px;">
-            <a href="https://zenodo.org/records/19509015" target="_blank" class="btn btn-dark"
-              style="font-size: 13px; padding: 10px 24px; width: fit-content;" onclick="addRipple(event)">View Paper
-              &rarr;</a>
-          </div>
-        </div>
-
-        <div class="blog-card reveal d2" style="padding: 36px 32px;">
-          <div>
-            <div class="blog-tag" style="margin-bottom: 14px;">Dec 16, 2025 · Zenodo</div>
-            <div class="blog-title"
-              style="font-size: 22px; line-height: 1.4; margin-bottom: 16px; color: var(--black);">Automatic Fan Speed
-              Control System Based on Room Temperature & Humidity...</div>
-            <div class="blog-meta"><span>Research Paper</span><span>Tsukamoto Fuzzy Logic</span></div>
-          </div>
-          <div style="margin-top: 40px;">
-            <a href="https://zenodo.org/records/17954364" target="_blank" class="btn btn-dark"
-              style="font-size: 13px; padding: 10px 24px; width: fit-content;" onclick="addRipple(event)">View Paper
-              &rarr;</a>
-          </div>
-        </div>
-
-      </div>
-      <div class="fees-hdr reveal" style="margin-top: 32px;">
-        <div class="fees-eyebrow">
-          <bold>Swipe to see my other Papers</bold> →
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="final-cta">
+<section id="final-cta">
     <div class="c">
       <div class="final-grid">
         <div class="reveal-left">
-          <div class="label" style="margin-bottom:16px">Get In Touch</div>
-          <h2 class="final-title">Let's create something<br>great together</h2>
-          <a href="mailto:raziatr27@gmail.com" class="btn btn-dark-lg" onclick="addRipple(event)">Send Me a Message
-            →</a>
+          
+<div class="reveal-left">
+          
+          <!-- Tambahkan atribut style pada div ini -->
+          <div class="advisor-card" style="background-color: #111111; padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1); width: 100%; box-sizing: border-box;">
+            <div class="ac-lbl">About Me</div>
+            <div class="ac-name">Fahrurrazi Athariq</div>
+            <div class="ac-role">Creative Developer & Tech Enthusiast</div>
+            <div class="ac-rows">
+              <div class="ac-row">
+                <div class="ac-key">Degree</div>
+                <div class="ac-val">Computer Science, Binus University</div>
+              </div>
+              <div class="ac-row">
+                <div class="ac-key">Experience</div>
+                <div class="ac-val">GDGoC · HIMTI · Marketing Binus</div>
+              </div>
+              <div class="ac-row">
+                <div class="ac-key">Location</div>
+                <div class="ac-val">Jakarta, Indonesia</div>
+              </div>
+            </div>
+            <div class="ac-divider"></div>
+            <div class="ac-cta">
+              <div class="ac-status"><span class="ac-dot"></span>Open for opportunities</div>
+              <a href="mailto:raziatr27@gmail.com" class="btn btn-white" onclick="addRipple(event)"
+                style="font-size:13px;padding:8px 18px">Get In Touch</a>
+            </div>
+          </div>
+          <!-- Akhir kartu About Me -->
+
+        </div>
+
         </div>
         <div class="exp-img-box">
           <img src="assets/images/aboutme.jpg" alt="aboutme">
+          ...
 
           <defs>
             <pattern id="h3" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(90)">
