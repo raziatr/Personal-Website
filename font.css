@@ -449,19 +449,14 @@ footer{background:var(--black);color:rgba(255,255,255,.6);padding:72px 24px 40px
 /* ══════════════════════════════════════════
    PORTFOLIO HORIZONTAL SCROLL CLEAN EFFECT
 ══════════════════════════════════════════ */
-/* ══════════════════════════════════════════
-   PORTFOLIO HORIZONTAL SCROLL CLEAN EFFECT
-══════════════════════════════════════════ */
 .stories-grid {
-  display: flex !important;          
-  overflow-x: auto !important;       
-  scroll-snap-type: x mandatory;     
+  display: flex !important;          /* Mengubah grid menjadi flex menyamping */
+  overflow-x: auto !important;       /* Mengaktifkan scroll horizontal */
+  scroll-snap-type: x mandatory;     /* Memberikan efek magnet/snap halus saat digeser */
   gap: 24px;
-  /* Menambahkan padding kiri dan kanan agar sejajar */
-  padding: 0 4px 24px 4px !important;
-  margin: 0 -4px; /* Kompensasi agar scroll tidak terpotong tiba-tiba */
-  scrollbar-width: none;             
-  -webkit-overflow-scrolling: touch; 
+  padding-bottom: 24px;              /* Jarak bawah agar bayangan (box-shadow) saat hover tidak terpotong */
+  scrollbar-width: none;             /* Sembunyikan scrollbar di Firefox */
+  -webkit-overflow-scrolling: touch; /* Optimasi scroll smooth di iOS/Safari */
 }
 
 /* Sembunyikan scrollbar di Chrome, Safari, dan Edge */
