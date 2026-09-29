@@ -811,3 +811,81 @@ footer{background:var(--black);color:rgba(255,255,255,.6);padding:72px 24px 40px
     margin-top: 0 !important; 
   }
   
+/* ══════════════════════════════════════════
+   OPTIMASI TAMPILAN MOBILE: KESELURUHAN LEBIH COMPACT
+══════════════════════════════════════════ */
+@media (max-width: 960px) {
+  /* 1. PERKECIL JARAK (PADDING & GAP) KESELURUHAN HALAMAN */
+  section { 
+    padding-top: 48px !important; 
+    padding-bottom: 48px !important; 
+  }
+  #hero { 
+    padding-top: calc(var(--nav-h) + 24px) !important; 
+  }
+  .hero-grid, .human-grid, .tactical-grid, .final-grid { 
+    gap: 24px !important; 
+  }
+  .tab-panel { 
+    padding: 32px 0 !important; 
+    gap: 24px !important; 
+  }
+
+  /* 2. PERKECIL UKURAN FONT GLOBAL */
+  .section-title { font-size: 24px !important; }
+  .hero-h1 { font-size: 26px !important; margin-bottom: 12px !important; line-height: 1.1 !important; }
+  .hero-sub { font-size: 12px !important; line-height: 1.5 !important; margin-bottom: 20px !important; }
+  p, .story-body, .tab-c-body, .how-item-body { font-size: 13px !important; line-height: 1.5 !important; }
+  .btn-dark-lg, .btn-outline-lg, .btn-white-lg { padding: 10px 20px !important; font-size: 13px !important; }
+
+  /* 3. PERTAHANKAN FOTO PROFIL DI SEBELAH KANAN (BAGIAN HOME) */
+  .hero-grid { 
+    /* Membagi 2 kolom di HP: Kiri (Teks) sekitar 60%, Kanan (Foto) 40% */
+    grid-template-columns: 1.3fr 1fr !important; 
+    align-items: center !important;
+  }
+  .hero-visual { 
+    display: flex !important; /* Memunculkan kembali gambar yang disembunyikan template */
+  }
+  .hero-img-box { 
+    max-width: 100% !important; 
+    border-radius: 12px !important; 
+  }
+
+  /* 4. SESUAIKAN TEKS STATISTIK AGAR MUAT DI KOLOM KIRI HP */
+  .hero-stats {
+    margin-top: 20px !important;
+    padding-top: 16px !important;
+    flex-direction: column !important; /* Disusun vertikal ke bawah agar tidak memakan tempat */
+    gap: 12px !important;
+  }
+  .hero-stat {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+  .hero-stat:not(:last-child) {
+    border-right: none !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+  .stat-val { font-size: 18px !important; }
+  .stat-label { font-size: 10px !important; }
+  
+  /* 5. PERKECIL KARTU ABOUT ME & FOOTER DI BAWAH */
+  .advisor-card { padding: 24px !important; }
+  .ac-name { font-size: 18px !important; }
+  
+  .foot-top { gap: 24px !important; padding-bottom: 24px !important; margin-bottom: 24px !important; }
+  .foot-logo { font-size: 18px !important; margin-bottom: 8px !important; }
+  .foot-tagline { font-size: 12px !important; }
+}
+
+/* Penyesuaian ekstra khusus untuk HP dengan layar sangat kecil (seperti iPhone SE) */
+@media (max-width: 480px) {
+  .hero-grid { 
+    grid-template-columns: 1.1fr 1fr !important; /* Rasio mendekati 50:50 */
+    gap: 12px !important; 
+  }
+  .hero-h1 { font-size: 22px !important; }
+  .hero-sub { font-size: 11px !important; }
+}
