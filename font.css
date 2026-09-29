@@ -889,3 +889,70 @@ footer{background:var(--black);color:rgba(255,255,255,.6);padding:72px 24px 40px
   .hero-h1 { font-size: 22px !important; }
   .hero-sub { font-size: 11px !important; }
 }
+
+/* ══════════════════════════════════════════
+   PERBAIKAN HEADER & NAVBAR DI MOBILE
+══════════════════════════════════════════ */
+@media (max-width: 640px) {
+  /* 1. Mengecilkan tinggi area Header / Navbar */
+  :root {
+    --nav-h: 56px !important; /* Sebelumnya 68px, diperkecil agar tidak tebal */
+  }
+
+  /* 2. Mengecilkan font logo agar tidak mepet dengan tombol */
+  .nav-logo {
+    font-size: 14px !important; /* Diperkecil dari 20px */
+    margin-right: 8px !important; /* Memberi jarak aman agar tidak menempel */
+    white-space: nowrap !important; 
+    overflow: hidden !important; 
+    text-overflow: ellipsis !important; /* Jika layar sangat kecil (contoh iPhone SE), teks sisa akan jadi "..." */
+  }
+
+  /* 3. Memunculkan kembali tombol LinkedIn yang disembunyikan template */
+  .nav-ctas .btn-ghost {
+    display: inline-flex !important; /* Membatalkan perintah "display: none" */
+    padding: 4px 6px !important;
+    font-size: 12px !important;
+  }
+
+  /* 4. Mengecilkan skala tombol CV khusus di header HP agar semua muat sejajar */
+  .nav-ctas .btn-cv {
+    padding: 4px 10px 4px 4px !important;
+    gap: 6px !important;
+  }
+  .nav-ctas .btn-cv .cv-text {
+    font-size: 13px !important;
+  }
+  .nav-ctas .btn-cv .icon-circle {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  .nav-ctas .btn-cv .icon-doc, 
+  .nav-ctas .btn-cv .icon-arrow {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  
+  /* 5. Merapatkan jarak antar elemen di sebelah kanan */
+  .nav-ctas {
+    gap: 4px !important;
+  }
+  
+  /* Mengecilkan sedikit batas menu ikon 3 garis (hamburger) */
+  .hamburger {
+    padding: 4px !important;
+    margin-left: 2px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-inner {
+    justify-content: space-between !important;
+  }
+  
+  /* Mengatur agar kontainer tombol (LinkedIn & CV) merapat ke sebelah kiri tombol hamburger */
+  .nav-ctas {
+    margin-left: auto !important; /* Mendorong area tombol ke kanan tapi menyisakan ruang untuk hamburger */
+    margin-right: 8px !important; /* Jarak pas dengan ikon garis 3 */
+  }
+}
