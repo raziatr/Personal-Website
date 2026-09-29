@@ -171,7 +171,7 @@ ul{list-style:none}
 .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 80px}
 .how-item{display:flex;gap:24px;align-items:flex-start;padding:28px;border:1px solid transparent;border-radius:12px;transition:border-color .25s,background .25s}
 .how-item:hover{border-color:var(--border);background:rgba(255,255,255,.7)}
-.how-num{font-family:'Playfair Display',serif;font-size:52px;font-weight:400;color:var(--border);line-height:1;min-width:44px;margin-top:-6px;user-select:none;transition:color .3s}
+.how-num{font-family:'Playfair Display',serif;font-size:52px;font-weight:400;color:var(--border);line-height:1;min-width:44px;margin-top:-6px;-webkit-user-select: none; user-select:none;transition:color .3s}
 .how-item:hover .how-num{color:var(--g300)}
 .how-item-title{font-family:'Playfair Display',serif;font-size:19px;font-weight:500;color:var(--black);margin-bottom:10px;line-height:1.3}
 .how-item-body{font-size:15px;color:var(--text2);line-height:1.7}
@@ -214,7 +214,7 @@ ul{list-style:none}
 ══════════════════════════════════════════ */
 #advisors{padding:96px 24px;background:var(--white)}
 .advisors-hdr{margin-bottom:52px}
-.advisors-carousel{overflow:hidden;cursor:grab;user-select:none;margin:0 -24px;padding:0 24px}
+.advisors-carousel{overflow:hidden;cursor:grab;-webkit-user-select: none; user-select:none;margin:0 -24px;padding:0 24px}
 .advisors-carousel.dragging{cursor:grabbing}
 .advisors-track{display:flex;gap:20px;transition:transform .0s;will-change:transform}
 .advisor-tile{background:var(--cream);border:1px solid var(--border);border-radius:16px;padding:28px 24px;min-width:320px;flex:0 0 320px;transition:border-color .25s,transform .25s,box-shadow .25s}
@@ -403,7 +403,7 @@ footer{background:var(--black);color:rgba(255,255,255,.6);padding:72px 24px 40px
 /* ══════════════════════════════════════════
    MODAL
 ══════════════════════════════════════════ */
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:300;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;padding:24px;backdrop-filter:blur(4px)}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:300;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;padding:24px;-webkit-backdrop-filter: blur(4px); backdrop-filter:blur(4px)}
 .overlay.open{opacity:1;visibility:visible}
 .modal{background:#fff;border-radius:16px;padding:36px;max-width:460px;width:100%;transform:translateY(12px) scale(.97);transition:transform .3s var(--ease-out-expo);box-shadow:0 32px 80px rgba(0,0,0,.2)}
 .overlay.open .modal{transform:translateY(0) scale(1)}
@@ -428,23 +428,10 @@ footer{background:var(--black);color:rgba(255,255,255,.6);padding:72px 24px 40px
    RESPONSIVE
 ══════════════════════════════════════════ */
 @media(max-width:960px){
-@media(max-width:960px){
   .hero-grid,.tab-panel,.human-grid,.tactical-grid,.final-grid{grid-template-columns:1fr;gap:48px}
-  
-  /* Hapus .hero-visual dari baris ini */
-  .tab-visual,.tactical-vis,.final-vis{display:none} 
-  
-  /* Tambahkan kode ini agar foto muncul di atas/bawah teks dan rapi di HP */
-  .hero-visual {
-    display: flex;
-    justify-content: center;
-    order: -1; /* Gambar akan muncul di atas teks. Hapus baris ini jika ingin di bawah teks */
-    margin-bottom: 24px;
-  }
-  
+  .hero-visual,.tab-visual,.tactical-vis,.final-vis{display:none}
   .how-grid{grid-template-columns:1fr;gap:0}
   .stories-grid,.blog-grid{grid-template-columns:1fr 1fr}
-  /* ... sisa kode ... */
   .fee-wrap{grid-template-columns:1fr 1fr}
   .foot-top{grid-template-columns:1fr 1fr}
   .tab-panel{padding:40px 0}
@@ -462,14 +449,16 @@ footer{background:var(--black);color:rgba(255,255,255,.6);padding:72px 24px 40px
 /* ══════════════════════════════════════════
    PORTFOLIO HORIZONTAL SCROLL CLEAN EFFECT
 ══════════════════════════════════════════ */
+/* Update bagian ini di file font.css Anda */
 .stories-grid {
-  display: flex !important;          /* Mengubah grid menjadi flex menyamping */
-  overflow-x: auto !important;       /* Mengaktifkan scroll horizontal */
-  scroll-snap-type: x mandatory;     /* Memberikan efek magnet/snap halus saat digeser */
+  display: flex !important;          
+  flex-wrap: nowrap !important;      /* TAMBAHKAN BARIS INI: Mencegah kartu turun ke bawah */
+  overflow-x: auto !important;       
+  scroll-snap-type: x mandatory;     
   gap: 24px;
-  padding-bottom: 24px;              /* Jarak bawah agar bayangan (box-shadow) saat hover tidak terpotong */
-  scrollbar-width: none;             /* Sembunyikan scrollbar di Firefox */
-  -webkit-overflow-scrolling: touch; /* Optimasi scroll smooth di iOS/Safari */
+  padding-bottom: 24px;              
+  scrollbar-width: none;             
+  -webkit-overflow-scrolling: touch; 
 }
 
 /* Sembunyikan scrollbar di Chrome, Safari, dan Edge */
