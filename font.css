@@ -956,3 +956,15 @@ footer{background:var(--black);color:rgba(255,255,255,.6);padding:72px 24px 40px
     margin-right: 8px !important; /* Jarak pas dengan ikon garis 3 */
   }
 }
+
+/* ══════════════════════════════════════════
+   MEMBUAT FOTO PROFIL DIAM (STICKY) SAAT DI-SCROLL
+══════════════════════════════════════════ */
+@media (min-width: 961px) {
+  /* Hanya aktifkan di layar komputer/laptop agar tidak merusak tampilan HP */
+  .hero-visual {
+    position: sticky !important;
+    top: calc(var(--nav-h) + 32px) !important; /* Jarak dari atas layar saat discroll */
+    align-self: flex-start !important;
+  }
+}
