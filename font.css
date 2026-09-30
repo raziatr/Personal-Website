@@ -1082,7 +1082,7 @@ section, #experience, #projects, #publications, #advisors, #final-cta {
 /* ══════════════════════════════════════════
    UPDATE: SCROLL OFFSET (POSISI PRESISI SESUAI GAMBAR)
 ══════════════════════════════════════════ */
-section, #experience, #projects, #publications, #advisors, #final-cta {
+section, #experience, #publications, #advisors, #final-cta {
   scroll-margin-top: var(--nav-h) !important; 
 }
 
