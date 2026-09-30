@@ -994,3 +994,54 @@ footer{background:var(--black);color:rgba(255,255,255,.6);padding:72px 24px 40px
   border-left: 3px solid var(--black) !important; /* Memunculkan garis penanda di sebelah kiri */
   background-color: rgba(0, 0, 0, 0.02) !important;
 }
+
+/* ══════════════════════════════════════════
+   GLOBAL COMPACT SIZING (MENGECILKAN RASIO SEMUA SECTION)
+══════════════════════════════════════════ */
+@media (min-width: 641px) {
+  /* 1. Mengecilkan Maksimal Lebar Konten (Container) */
+  :root {
+    --mw: 1024px !important; /* Aslinya 1120px, diperkecil agar lebih merapat ke tengah */
+  }
+
+  /* 2. Mengecilkan Jarak Jeda (Padding) Atas-Bawah Setiap Section */
+  section, #experience, #projects, #publications, #advisors, #final-cta {
+    padding-top: 64px !important;  /* Aslinya 96px */
+    padding-bottom: 64px !important; 
+  }
+  
+  #hero {
+    padding-top: calc(var(--nav-h) + 40px) !important;
+    padding-bottom: 56px !important;
+  }
+  
+  footer {
+    padding-top: 56px !important;
+    padding-bottom: 32px !important;
+  }
+
+  /* 3. Mengecilkan Jarak Antar Kolom (Gap) pada Layout Bersebelahan */
+  .hero-grid, .human-grid, .tactical-grid, .final-grid, .exp-panel, .tab-panel {
+    gap: 48px !important; /* Aslinya 64px - 80px */
+  }
+
+  /* 4. Mengecilkan Ukuran Teks Judul Utama */
+  .hero-h1 {
+    font-size: clamp(32px, 4vw, 56px) !important; /* Aslinya mencapai 68px */
+    margin-bottom: 20px !important;
+  }
+  
+  .section-title {
+    font-size: clamp(24px, 3vw, 36px) !important; /* Aslinya mencapai 46px */
+  }
+
+  /* 5. Mengecilkan Jarak Dalam (Padding) pada Kartu Projek & Skill */
+  .story-card, .blog-card, .advisor-tile, .advisor-card {
+    padding: 24px !important; /* Aslinya 32px */
+  }
+  
+  /* Mengecilkan sedikit ukuran font deskripsi agar seimbang */
+  body, p, .story-body, .hero-sub, .tab-c-body {
+    font-size: 15px !important; /* Aslinya 16px */
+  }
+}
