@@ -479,3 +479,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/* ─────────────────────────────────────────
+   18. SCROLL SPY (ANIMASI MENU AKTIF)
+───────────────────────────────────────── */
+function updateActiveNavMenu() {
+  // Ambil semua link menu di desktop dan mobile
+  const navLinks = document.querySelectorAll('.nav-links a, .mobile-link');
+  // Atur titik deteksi sedikit di bawah atas layar (1/3 layar)
+  const scrollPos = window.scrollY + window.innerHeight / 3; 
+
+  navLinks.forEach(link => {
+    const targetId = link.getAttribute('href');
+    if (!targetId || !targetId.startsWith('#')) return; 
+    
+    const section = document.querySelector(targetId);
+    if (section) {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      
+      // Jika posisi scroll berada di dalam area section ini
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        link.classList.add('active'); // Tambahkan kelas active
+      } else {
+        link.classList.remove('active'); // Hapus jika sudah lewat
+      }
+    }
+  });
+}
+
+// Jalankan saat web pertama kali dibuka
+document.addEventListener('DOMContentLoaded', updateActiveNavMenu);
+
+// Jalankan setiap kali halaman digulir (di-scroll)
+window.addEventListener('scroll', () => {
+  requestAnimationFrame(updateActiveNavMenu);
+}, { passive: true });

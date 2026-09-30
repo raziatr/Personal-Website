@@ -968,3 +968,29 @@ footer{background:var(--black);color:rgba(255,255,255,.6);padding:72px 24px 40px
     align-self: flex-start !important;
   }
 }
+
+/* ══════════════════════════════════════════
+   ANIMASI MENU AKTIF (SCROLL SPY)
+══════════════════════════════════════════ */
+/* Efek menetap untuk menu Desktop */
+.nav-links a.active {
+  color: var(--black) !important;
+}
+
+.nav-links a.active::after {
+  width: 100% !important; /* Membuat garis bawah tetap penuh */
+}
+
+/* Efek menetap untuk menu Mobile (HP) */
+.mobile-link {
+  transition: all 0.3s ease !important;
+}
+
+.mobile-link.active {
+  color: var(--black) !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+  padding-left: 12px !important; /* Teks bergeser sedikit ke kanan */
+  border-left: 3px solid var(--black) !important; /* Memunculkan garis penanda di sebelah kiri */
+  background-color: rgba(0, 0, 0, 0.02) !important;
+}
