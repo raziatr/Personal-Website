@@ -996,52 +996,97 @@ footer{background:var(--black);color:rgba(255,255,255,.6);padding:72px 24px 40px
 }
 
 /* ══════════════════════════════════════════
-   GLOBAL COMPACT SIZING (MENGECILKAN RASIO SEMUA SECTION)
+   MENGECILKAN UKURAN KARTU PROJECT
 ══════════════════════════════════════════ */
-@media (min-width: 641px) {
-  /* 1. Mengecilkan Maksimal Lebar Konten (Container) */
-  :root {
-    --mw: 1024px !important; /* Aslinya 1120px, diperkecil agar lebih merapat ke tengah */
-  }
+/* 1. Mengecilkan Lebar Kartu Project */
+.stories-grid .story-card {
+  flex: 0 0 300px !important; /* Lebar desktop dikecilkan dari 360px menjadi 300px */
+  min-height: auto !important;
+}
 
-  /* 2. Mengecilkan Jarak Jeda (Padding) Atas-Bawah Setiap Section */
-  section, #experience, #projects, #publications, #advisors, #final-cta {
-    padding-top: 64px !important;  /* Aslinya 96px */
-    padding-bottom: 64px !important; 
-  }
-  
-  #hero {
-    padding-top: calc(var(--nav-h) + 40px) !important;
-    padding-bottom: 56px !important;
-  }
-  
-  footer {
-    padding-top: 56px !important;
-    padding-bottom: 32px !important;
-  }
+/* 2. Mengecilkan Jarak Dalam (Padding) Kartu */
+.story-card {
+  padding: 20px 16px !important; /* Jarak atas-bawah 20px, kiri-kanan 16px */
+  border-radius: 12px !important;
+}
 
-  /* 3. Mengecilkan Jarak Antar Kolom (Gap) pada Layout Bersebelahan */
-  .hero-grid, .human-grid, .tactical-grid, .final-grid, .exp-panel, .tab-panel {
-    gap: 48px !important; /* Aslinya 64px - 80px */
-  }
+/* 3. Mengecilkan Jarak Bawah Gambar */
+.story-img-box {
+  margin-bottom: 16px !important; /* Aslinya 24px */
+  border-radius: 8px !important;
+}
 
-  /* 4. Mengecilkan Ukuran Teks Judul Utama */
-  .hero-h1 {
-    font-size: clamp(32px, 4vw, 56px) !important; /* Aslinya mencapai 68px */
-    margin-bottom: 20px !important;
-  }
-  
-  .section-title {
-    font-size: clamp(24px, 3vw, 36px) !important; /* Aslinya mencapai 46px */
-  }
+/* 4. Mengecilkan Ukuran Teks di Dalam Kartu Project */
+.story-card .how-item-title {
+  font-size: 15px !important; /* Judul project lebih kecil (aslinya 19px) */
+  line-height: 1.4 !important;
+  margin-bottom: 8px !important;
+}
 
-  /* 5. Mengecilkan Jarak Dalam (Padding) pada Kartu Projek & Skill */
-  .story-card, .blog-card, .advisor-tile, .advisor-card {
-    padding: 24px !important; /* Aslinya 32px */
+.story-card .story-body {
+  font-size: 12px !important; /* Teks deskripsi lebih kecil */
+  line-height: 1.5 !important;
+  margin-bottom: 16px !important;
+}
+
+.story-tag {
+  font-size: 9px !important;
+  padding: 4px 10px !important;
+  margin-bottom: 12px !important;
+}
+
+.story-link {
+  font-size: 11px !important;
+  margin-bottom: 16px !important;
+}
+
+/* 5. Mengecilkan Bagian Footer Kartu (Nama & Role) */
+.story-person {
+  padding-top: 16px !important; /* Garis pembatas lebih dekat */
+}
+.person-name {
+  font-size: 13px !important;
+}
+.person-role {
+  font-size: 11px !important;
+}
+
+/* 6. Penyesuaian Ekstra untuk Layar HP (Mobile) */
+@media (max-width: 640px) {
+  .stories-grid .story-card {
+    flex: 0 0 260px !important; /* Di layar HP, lebar kartu jadi 260px (sebelumnya 300px) */
   }
-  
-  /* Mengecilkan sedikit ukuran font deskripsi agar seimbang */
-  body, p, .story-body, .hero-sub, .tab-c-body {
-    font-size: 15px !important; /* Aslinya 16px */
+}
+
+/* ══════════════════════════════════════════
+   FIX SCROLL OFFSET (MENCEGAH JUDUL TERTUTUP NAVBAR)
+══════════════════════════════════════════ */
+section, #experience, #projects, #publications, #advisors, #final-cta {
+  scroll-margin-top: calc(var(--nav-h) + 20px) !important;
+}
+
+/* Khusus hero section tidak perlu margin atas karena sudah di paling atas */
+#hero {
+  scroll-margin-top: 0 !important;
+}
+
+/* ══════════════════════════════════════════
+   MENONAKTIFKAN STICKY PADA FOTO PROFIL
+══════════════════════════════════════════ */
+@media (min-width: 961px) {
+  .hero-visual {
+    position: static !important;
   }
+}
+
+/* ══════════════════════════════════════════
+   UPDATE: SCROLL OFFSET (POSISI PRESISI SESUAI GAMBAR)
+══════════════════════════════════════════ */
+section, #experience, #projects, #publications, #advisors, #final-cta {
+  scroll-margin-top: var(--nav-h) !important; 
+}
+
+/* Khusus hero section tetap 0 */
+#hero {
+  scroll-margin-top: 0 !important;
 }
